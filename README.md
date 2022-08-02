@@ -47,3 +47,7 @@ export default worker;
 ## How it works
 
 It uses the [postgres](https://deno.land/x/postgres@v0.16.1) Deno module, bundles it, and adds some code to make it work with Cloudflare Workers.
+
+## Tips 
+### SSL mode
+If your Postgre server has SSL mode activated, you will need to disable it as the cloudflared tunnel already has SSL encryption and it doesn't play well with the client trying to connect.
